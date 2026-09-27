@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Injamamul Haque - Portfolio</title>
+    <style>
+        /* আপনার ওয়েবসাইটের সাধারণ ডিজাইন ও স্টাইল */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #1e293b;
+            border-bottom: 1px solid #334155;
+        }
+        .nav-pic-box {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #3b82f6;
+            cursor: pointer;
+            position: relative;
+        }
+        .nav-pic-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .nav-pic-box input {
+            display: none;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            border: 4px solid #3b82f6;
+            cursor: pointer;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .avatar input {
+            display: none;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+        p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- হেডার এবং নেভিগেশন সেকশন -->
+    <header>
+        <div class="logo"><b>Injamamul Haque</b></div>
+        
+        <!-- নেভ পিকচার বক্স -->
+        <label class="nav-pic-box" id="navPicBox" title="Profile picture">
+            <img id="navPicImg" src="profile.jpeg" alt="Injamamul Haque" style="display: block;">
+            <input type="file" id="navPicInput" accept="image/*">
+        </label>
+    </header>
+
+    <!-- মূল কন্টেন্ট সেকশন -->
+    <div class="container">
+        <!-- প্রোফাইল অ্যাভাটার বক্স -->
+        <label class="avatar" id="avatar" tabindex="0">
+            <img id="avatarImg" src="profile.jpeg" alt="Injamamul Haque" style="display: block;">
+            <input type="file" id="avatarInput" accept="image/*">
+        </label>
+
+        <h1>Hello, I'm Injamamul Haque</h1>
+        <p>Welcome to my professional portfolio website.</p>
+    </div>
+
+    <!-- জাভাস্ক্রিপ্ট কোড: স্থায়ী ছবি সেটআপ এবং ব্রাউজারে ধরে রাখার জন্য -->
+    <script>
+        try {
+          if (!localStorage.getItem('ih_nav_pic_v1')) {
+            localStorage.setItem('ih_nav_pic_v1', 'profile.jpeg');
+          }
+          if (!localStorage.getItem('ih_profile_photo_v3')) {
+            localStorage.setItem('ih_profile_photo_v3', 'profile.jpeg');
+          }
+        } catch(e) {}
+    </script>
+</body>
+</html>
